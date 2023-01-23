@@ -1,0 +1,4 @@
+For ellipse
+x = 2, y = 0
+vx =0, vy = 0.8
+for vy = 0.7 almost circle
