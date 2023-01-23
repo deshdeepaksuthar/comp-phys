@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define dt 0.00000001
+#define dt 0.00001
 
 // Hamilonian of the system = p^2/2m +U
 typedef struct
@@ -41,10 +41,8 @@ evolution(position *p, velocity *v, force *f)
 	p->x += v->x*dt;
 	p->y += v->y*dt;
 	double mass = 1.2;
-//	f->x = -1*mass*(x)/pow(sqrt(x*x + y*y),3);
-//	f->y = -1*mass*(y)/pow(sqrt(x*x + y*y),3);
-	f->x = -mass*x*x;
-	f->y = -mass*y*y;
+	f->x = -1*mass*(x)/pow(sqrt(x*x + y*y),3);
+	f->y = -1*mass*(y)/pow(sqrt(x*x + y*y),3);
 
 }
 
@@ -53,7 +51,7 @@ main()
 {
 	velocity a;
 	a.x = 0;
-	a.y = 0.05;
+	a.y = 0.5;
 	position b;
 	b.x = 1;
 	b.y = 0;
@@ -67,8 +65,8 @@ main()
 	f.y = 0;
 
 
-	for(long i=0; i<10000000000;i++){
-		if(i%1000000 == 0) printf("%f\t%f\t%ld\n",b.x, b.y, i);
+	for(long i=0; i<10000000;i++){
+		if(i%1000 == 0) printf("%f\t%f\t%ld\n",b.x, b.y, i);
 		evolution(&b,&a,&f);
 	}
 

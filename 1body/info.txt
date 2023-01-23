@@ -2,3 +2,11 @@ For ellipse
 x = 2, y = 0
 vx =0, vy = 0.8
 for vy = 0.7 almost circle
+
+
+With the parameters
+	mass = 1.2
+	position = 1, 0
+	velocity = 0, 0.5
+the radius of the orbit is spontaneously increasing
+so increasing the scale of the things
