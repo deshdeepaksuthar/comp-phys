@@ -1,0 +1,5 @@
+This folder has the two point sources of gravitational fields
+at 0,0 and 1,0 with equal mass of 1.2
+
+one.png was something interesting
+two.png is just the time extention of one.png
