@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define dt 0.00001
+#define dt 0.000001
 
 // Hamilonian of the system = p^2/2m +U
 typedef struct

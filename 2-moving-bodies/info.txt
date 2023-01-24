@@ -1,0 +1,3 @@
+one.png is when the total momentum of the system is zero
+
+two.png is when there is a total x momentum to the system
