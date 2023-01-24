@@ -1,0 +1,6 @@
+Finally three bodies
+all of them move
+and
+	one is for a smaller time
+	two is the same initial conditions but longer time
+	three has been run for even longer time
