@@ -72,9 +72,9 @@ evol3d(
 
 /* Force on particle one */
 	/* due to two */
-	x = p1->x - p2->x;
-	y = p1->y - p2->y;
-	z = p1->z - p2->z;
+	x = x1 - x2;
+	y = y1 - y2;
+	z = z1 - z2;
 	mass = mass1;
 
 	f1->x += -1*mass*mass2*(x)/pow((x*x + y*y + z*z),1.5);
