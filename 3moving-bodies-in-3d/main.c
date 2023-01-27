@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-#define dt 0.001
+#define dt 0.000001
 
 // Hamilonian of the system = p^2/2m +U
 typedef struct
@@ -163,8 +163,8 @@ main()
 	velocity v1;
 	force f1;
 
-	p1.x = 0;
-	p1.y = 2;
+	p1.x = 1;
+	p1.y = 0;
 	p1.z = 0;
 	v1.x = 0;
 	v1.y = 0;
@@ -175,37 +175,37 @@ main()
 	force f2;
 
 	p2.x = 0;
-	p2.y = 0;
+	p2.y = 0.5;
 	p2.z = 0;
 	v2.x = 0;
 	v2.y = 0;
-	v2.z = 0;
+	v2.z = -0.5;
 
 	position p3;
 	velocity v3;
 	force f3;
 
-	p3.x = 2;
-	p3.y = 0;
+	p3.x = 1;
+	p3.y = 1.732/2.0;
 	p3.z = 0;
-	v3.x = 0;
+	v3.x = 1;
 	v3.y = 0;
-	v3.z = 0;
+	v3.z = 0.5;
 
 
-	for(long i=0; i<3;i++){
-		if(i%1 == 0) printf("%ld\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", i,
+	for(long i=0; i<10000000;i++){
+		if(i%1000 == 0) printf("%ld\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", i,
 				p1.x, p1.y, p1.z,
 				p2.x, p2.y, p2.z,
 				p3.x, p3.y, p3.z);
-		if(i%1 == 0) printf("%ld\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", i,
-				v1.x, v1.y, v1.z,
-				v2.x, v2.y, v2.z,
-				v3.x, v3.y, v3.z);
-		if(i%1 == 0) printf("%ld\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", i,
-				f1.x, f1.y, f1.z,
-				f2.x, f2.y, f2.z,
-				f3.x, f3.y, f3.z);
+//		if(i%1 == 0) printf("%ld\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", i,
+//				v1.x, v1.y, v1.z,
+//				v2.x, v2.y, v2.z,
+//				v3.x, v3.y, v3.z);
+//		if(i%1 == 0) printf("%ld\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", i,
+//				f1.x, f1.y, f1.z,
+//				f2.x, f2.y, f2.z,
+//				f3.x, f3.y, f3.z);
 		evol3d(&p1,&p2, &p3,&v1,&v2, &v3,&f1,&f2, &f3);
 	}
 
