@@ -1,0 +1,31 @@
+four and five are the same initial conditions,
+	p1.x = 1;
+	p1.y = 0;
+	p1.z = 0;
+	v1.x = 0;
+	v1.y = 0;
+	v1.z = 0;
+
+	position p2;
+	velocity v2;
+	force f2;
+
+	p2.x = 0;
+	p2.y = 1;
+	p2.z = 0;
+	v2.x = -0.5;
+	v2.y = 0;
+	v2.z = 0;
+
+	position p3;
+	velocity v3;
+	force f3;
+
+	p3.x = 1;
+	p3.y = 1;
+	p3.z = 0;
+	v3.x = 0.5;
+	v3.y = 0;
+	v3.z = 0;
+
+iterated over a long time,

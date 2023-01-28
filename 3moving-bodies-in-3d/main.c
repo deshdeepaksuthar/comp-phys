@@ -175,25 +175,25 @@ main()
 	force f2;
 
 	p2.x = 0;
-	p2.y = 0.5;
+	p2.y = 1;
 	p2.z = 0;
-	v2.x = 0;
+	v2.x = -0.5;
 	v2.y = 0;
-	v2.z = -0.5;
+	v2.z = 0;
 
 	position p3;
 	velocity v3;
 	force f3;
 
 	p3.x = 1;
-	p3.y = 1.732/2.0;
+	p3.y = 1;
 	p3.z = 0;
-	v3.x = 1;
+	v3.x = 0.5;
 	v3.y = 0;
-	v3.z = 0.5;
+	v3.z = 0;
 
 
-	for(long i=0; i<10000000;i++){
+	for(long i=0; i<1000000;i++){
 		if(i%1000 == 0) printf("%ld\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", i,
 				p1.x, p1.y, p1.z,
 				p2.x, p2.y, p2.z,
